@@ -1,27 +1,21 @@
 <template>
-  <div>
-    <Header />
-    <Banner />
-    <Impactory />
-    <Competitor />
-    <CompExamples />
-    <UseFree />
-    <Footer />
-  </div>
+  <Main />
 </template>
 
+<style lang="scss" scoped>
+@import "../assets/stylesheets/main.sass";
+@import "../assets/stylesheets/global.scss";
+</style>;
+
 <script>
-import Header from "./container/Header.vue";
-import Footer from "./container/Footer.vue";
+import Main from "./pages";
 
 export default {
   data() {
     return {};
   },
   components: {
-    Header,
-
-    Footer,
+    Main,
   },
 };
 </script>

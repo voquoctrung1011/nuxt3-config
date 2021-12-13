@@ -1,3 +1,4 @@
+@import "./global.scss";
 .competitor {
   background: #fff;
   padding: 240px 0;
@@ -8,6 +9,9 @@
     padding: 10px 0;
   }
   .competitor__container {
+    @media only screen and (max-width: 1023px) {
+      padding: 0 40px;
+    }
     @media only screen and (max-width: 582px) {
       margin: 50px auto;
     }

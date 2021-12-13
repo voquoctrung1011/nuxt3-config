@@ -24,9 +24,17 @@ export default {
         type: "text/css",
         href: "https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.2/css/bulma.min.css",
       },
+      {
+        rel: "stylesheet",
+        href: "https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css",
+      },
+      {
+        rel: "stylesheet",
+        href: "https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma-rtl.min.css",
+      },
     ],
   },
-  css: ["~assets/stylesheets/main.sass"],
+  // css: ["~assets/stylesheets/main.sass"],
   // Global CSS: https://go.nuxtjs.dev/config-css
   // css: ["ant-design-vue/dist/antd.css"],
 

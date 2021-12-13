@@ -121,6 +121,7 @@
 
 <style lang="scss" scoped>
 @import "../assets/stylesheets/header.scss";
+@import "../assets/stylesheets/main.sass";
 </style>
 
 <script>

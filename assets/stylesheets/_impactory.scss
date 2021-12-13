@@ -1,3 +1,18 @@
+@import "./global.scss";
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .impactory {
   width: 100%;
   background: #f6f7f9;
@@ -40,6 +55,9 @@
           width: 30%;
         }
       }
+    }
+    .modal {
+      animation: fadein 0.5s;
     }
     .modal-content {
       width: 80%;
@@ -189,8 +207,8 @@
             font-weight: bold;
             font-size: 38px;
             color: #212037;
-            @media only screen and (max-width: 375px) {
-              font-size: 30px;
+            @media only screen and (max-width: 582px) {
+              font-size: 20px;
             }
           }
         }
@@ -289,6 +307,9 @@
 
       &__itemm {
         font-size: 38px;
+        @media only screen and (max-width: 582px) {
+          font-size: 20px;
+        }
       }
     }
   }

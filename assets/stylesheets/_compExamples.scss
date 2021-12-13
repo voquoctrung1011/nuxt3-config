@@ -1,3 +1,4 @@
+@import "./global.scss";
 .examples {
   .examples__container {
     margin: 240px auto;
@@ -151,7 +152,6 @@ $orange: hsl(50, 80%, 50%);
   backface-visibility: hidden;
   transform-style: preserve-3d;
   transition: ease-in-out 600ms;
-  height: 320px;
   // overflow: hidden;
 }
 

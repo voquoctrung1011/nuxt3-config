@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="__layout">
     <Header />
     <Banner />
     <Impactory />
@@ -11,7 +11,8 @@
 </template>
 
 <style lang="scss" scoped>
-@import "../assets/stylesheets/main.scss";
+@import "../assets/stylesheets/main.sass";
+@import "../assets/stylesheets/global.scss";
 </style>;
 
 <script>

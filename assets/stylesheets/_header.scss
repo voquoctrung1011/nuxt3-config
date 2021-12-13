@@ -1,5 +1,9 @@
+@import "./global.scss";
 .navbar {
   padding: 16px 40px;
+  @media only screen and (max-width: 375px) {
+    padding: 16px 15px;
+  }
   .navbar-brand {
     justify-content: space-between;
     .navbar-item {
@@ -151,8 +155,17 @@
 .navbar-link:not(.is-arrowless)::after {
   border-color: #7c7f91;
   margin-top: -0.75em;
-  right: 5.53px;
+  right: 21px;
   @media only screen and (max-width: 1023px) {
     margin-top: -0.5em;
+  }
+}
+.navbar-start {
+  @media only screen and (max-width: 1023px) {
+    .navbar-item,
+    .has-dropdown,
+    .is-hoverable {
+      padding-bottom: 30px;
+    }
   }
 }
