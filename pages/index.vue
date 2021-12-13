@@ -1,5 +1,5 @@
 <template>
-  <div id="__layout">
+  <div>
     <Header />
     <Banner />
     <Impactory />

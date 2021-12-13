@@ -1,5 +1,5 @@
 <template>
-  <Main />
+  <NuxtPage id="__layout" />
 </template>
 
 <style lang="scss" scoped>
