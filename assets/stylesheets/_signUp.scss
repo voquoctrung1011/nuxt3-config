@@ -1,11 +1,17 @@
 @import "./global.scss";
+::-webkit-scrollbar {
+  width: 2px;
+}
+
+.modal-content::-webkit-scrollbar {
+  width: 10px;
+}
 .modal-background {
   background-color: rgb(10 10 10 / 40%);
 }
 .modal-content {
   background-color: #fff;
   width: 540px;
-  height: max-content;
   padding: 40px;
   text-align: center;
   @media only screen and (max-width: 582px) {
@@ -95,6 +101,7 @@
   .signup {
     font-size: 14px;
     color: #7c7f91;
+
     span {
       color: #5c6bc0;
       font-weight: bold;
@@ -209,6 +216,7 @@
         right: 10px;
         text-align: right;
         top: 7px;
+        width: max-content;
       }
       button {
         width: max-content;

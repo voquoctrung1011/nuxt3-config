@@ -7,7 +7,16 @@
         <div class="control">
           <div class="select">
             <select>
-              <option v-for="item in arrSelect" :key="item">{{ item }}</option>
+              <option
+                style="
+                  background: #fff !important;
+                  box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.05);
+                "
+                v-for="item in arrSelect"
+                :key="item"
+              >
+                {{ item }}
+              </option>
             </select>
           </div>
         </div>

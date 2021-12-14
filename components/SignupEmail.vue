@@ -76,7 +76,6 @@
                 class="input is-success"
                 type="text"
                 placeholder="이메일 주소"
-                value="이메일 주소"
               />
             </div>
             <div class="control control-button">
@@ -91,7 +90,6 @@
                 class="input is-success"
                 type="text"
                 placeholder="이메일 인증코드"
-                value="이메일 인증코드"
               />
             </div>
             <div class="control control-button">

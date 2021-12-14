@@ -1,11 +1,15 @@
 @import "./global.scss";
+::-webkit-scrollbar {
+  width: 0px;
+}
 .modal-content {
   transition: 1s;
   background-color: #fff;
   width: 540px;
-  height: max-content;
+  height: 582px;
   padding: 40px;
   text-align: center;
+
   @media only screen and (max-width: 582px) {
     width: 90%;
   }
@@ -30,6 +34,7 @@
         font-size: 16px;
         font-family: "Pretendard";
         border-radius: 6px;
+        height: 52px;
       }
     }
     .google {
@@ -74,6 +79,9 @@
         margin-right: 6px;
       }
     }
+    p {
+      font-weight: 700;
+    }
   }
   .or {
     color: #7c7f91;
@@ -84,6 +92,7 @@
   .signup {
     font-size: 14px;
     color: #7c7f91;
+    margin-top: 20px;
     span {
       color: #5c6bc0;
       font-weight: bold;

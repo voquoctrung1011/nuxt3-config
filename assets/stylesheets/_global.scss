@@ -97,6 +97,9 @@ $opacity-transition: opacity $speed ease-in-out;
 .modal {
   animation: fadein 0.5s;
 }
+.modal-content {
+  border-radius: 8px;
+}
 @keyframes fadein {
   from {
     opacity: 0;

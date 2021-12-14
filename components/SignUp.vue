@@ -1,5 +1,6 @@
 <template>
-  <div class="modal" v-bind:class="{ 'is-active': modalSignup }">
+  <!-- v-bind:class="{ 'is-active': modalSignup }" -->
+  <div class="modal is-active">
     <div class="modal-background"></div>
     <SignUpEmail
       v-if="signupEmail"
@@ -72,6 +73,7 @@ export default {
   components: { SignUpEmail },
   methods: {
     changeModalSignUp: function () {
+      this.$emit("changeModalLogin");
       this.$emit("changeModalSignUp");
     },
   },

@@ -1,7 +1,10 @@
 <template>
   <div class="modal" id="modal" v-bind:class="{ 'is-active': modalLogin }">
     <div class="modal-background"></div>
-    <div class="modal-content">
+    <div
+      class="modal-content"
+      v-bind:style="[modalSignup ? { display: 'none' } : { display: 'block' }]"
+    >
       <div class="logo">
         <img
           src="../assets/images/ipedit.png"
@@ -59,8 +62,9 @@
       </p>
     </div>
     <SignUp
-      v-if="modalSignup"
+      v-if="!modalSigin && modalSignup"
       v-bind:modalSignup="modalSignup"
+      v-on:changeModalLogin="changeModalLogin"
       v-on:changeModalSignUp="changeModalSignUp"
     />
 
@@ -82,6 +86,7 @@ export default {
   data() {
     return {
       modalSignup: false,
+      modalSigin: false,
     };
   },
   props: {
@@ -97,8 +102,9 @@ export default {
     },
     openModalSignUp: function () {
       this.modalSignup = true;
-      // modalLogin = false;
     },
   },
+  mounted() {},
+  created() {},
 };
 </script>
