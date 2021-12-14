@@ -108,7 +108,7 @@
             </div>
             <div class="top-img">
               <img
-                src="../assets/images/Sec.png"
+                src="~/assets/images/Sec.png"
                 alt="../assets/images/Sec.png"
               />
             </div>
