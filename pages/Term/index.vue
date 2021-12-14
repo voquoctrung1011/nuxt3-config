@@ -1,5 +1,5 @@
 <template>
-  <div class="aaaa">
+  <div class="aaaa" id="__layout">
     <Header />
     <div>
       <CompTerm

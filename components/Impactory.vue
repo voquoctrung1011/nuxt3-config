@@ -14,7 +14,11 @@
       </div>
 
       <!-- modal video -->
-      <div class="modal" v-bind:class="{ 'is-active': modalVideo }">
+      <div
+        class="modal"
+        v-bind:class="{ 'is-active': modalVideo }"
+        @keydown.esc="modalVideo = false"
+      >
         <div class="modal-background"></div>
         <div class="modal-content">
           <iframe
@@ -170,5 +174,13 @@ export default {
     };
   },
   components: {},
+  mounted() {
+    document.onkeydown = (evt) => {
+      evt = evt || window.event;
+      if (evt.keyCode == 27) {
+        this.modalVideo = false;
+      }
+    };
+  },
 };
 </script>

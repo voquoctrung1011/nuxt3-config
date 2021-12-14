@@ -1,5 +1,5 @@
 <template>
-  <NuxtPage id="__layout" />
+  <NuxtPage id="__layout" style="background: #f6f7f9" />
 </template>
 
 <style lang="scss" scoped>
