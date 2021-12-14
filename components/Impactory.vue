@@ -63,8 +63,9 @@
           <div
             class="bottom"
             v-bind:style="{ backgroundImage: 'url(' + highlight + ')' }"
+            style="width: 114px"
           >
-            작업 시간
+            <p>작업 시간</p>
           </div>
         </div>
 
@@ -76,8 +77,9 @@
           <div
             class="bottom"
             v-bind:style="{ backgroundImage: 'url(' + highlight + ')' }"
+            style="width: 87px"
           >
-            품질
+            <p>품질</p>
           </div>
 
           <div class="contentt">
@@ -125,8 +127,9 @@
           <div
             class="bottom"
             v-bind:style="{ backgroundImage: 'url(' + highlight + ')' }"
+            style="width: 127px"
           >
-            사용 국가
+            <p>사용 국가</p>
           </div>
 
           <!-- <div class="contentt">

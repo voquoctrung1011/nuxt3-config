@@ -29,11 +29,16 @@
     .video {
       background-position: center;
       background-repeat: no-repeat;
-      background-size: cover !important;
+      // background-size: cover !important;
       height: 624px;
       background: linear-gradient(0deg, #00000033, rgba(0, 0, 0, 0.2));
-      box-shadow: 0px 100px 80px -60px rgba(0, 0, 0, 0.1);
+      box-shadow: 0px 100px 80px -60px rgb(0 0 0 / 10%);
       border-radius: 10px;
+      @media only screen and (max-width: 992px) {
+        background: none;
+        height: 500px;
+        background-position: center !important;
+      }
       @media only screen and (max-width: 582px) {
         height: 400px;
         background: bottom;
@@ -252,13 +257,16 @@
         }
         .bottom {
           margin-top: 36px;
-          font-weight: bold;
-          font-size: 24px;
           text-align: center;
           color: #212037;
           max-height: 100%;
-          display: flex;
+          // display: flex;
           align-items: end;
+          p {
+            font-weight: bold;
+            font-size: 24px;
+            margin-top: -10px;
+          }
         }
       }
     }
