@@ -1,5 +1,5 @@
 <template>
-  <div class="competitor">
+  <div class="competitor" v-on:scroll="scrollFunction">
     <div class="competitor__container container">
       <h3>
         아직도 사용 전이신가요?<br />
@@ -7,45 +7,81 @@
       </h3>
       <div class="markets">
         <p>사용자 수</p>
-        <h1 class="count" id="count"><span>명</span></h1>
+        <h1 class="" id="count"><span>명</span></h1>
       </div>
       <div class="markets">
         <p>처리 사건 수</p>
-        <h1 class="count2"><span>건</span></h1>
+        <h1 class="" id="count2"><span>건</span></h1>
       </div>
       <div class="markets">
         <p>작성 시간</p>
-        <h1 class="count3"><span>시간</span></h1>
+        <h1 class="" id="count3"><span>시간</span></h1>
       </div>
     </div>
+    <!-- <div class="iCountUp">
+      <ICountUp
+        :delay="delay"
+        :endVal="endVal"
+        :options="options"
+        @ready="onReady"
+      />
+    </div> -->
   </div>
 </template>
 
 <style lang="scss" scoped>
 @import "../assets/stylesheets/competitor.scss";
+.iCountUp {
+  font-size: 12em;
+  margin: 0;
+  color: #4d63bc;
+}
 </style>
 
-<script type='text/javascript'>
+<script  type="text/babel">
+import ICountUp from "vue-countup-v2";
 export default {
   data() {
     return {
       text: "",
+      delay: 1000,
+      endVal: 120500,
+      options: {
+        useEasing: true,
+        useGrouping: true,
+        separator: ",",
+        decimal: ".",
+        prefix: "",
+        suffix: "",
+      },
     };
   },
   methods: {
-    myFunction: function () {
-      setTimeout(function () {
-        this.text = "60,000";
-      }, 5000);
-      console.log(this.text);
-      // return text;
+    onReady: function (instance, CountUp) {
+      const that = this;
+      instance.update(that.endVal + 100);
+    },
+
+    scrollFunction: function () {
+      if (
+        document.body.scrollTop > 2000 ||
+        document.documentElement.scrollTop > 2000
+      ) {
+        document.getElementById("count").className = "count";
+        document.getElementById("count2").className = "count2";
+        document.getElementById("count3").className = "count3";
+      } else {
+        // document.getElementById("count").className = "";
+        // document.getElementById("count2").className = "";
+        // document.getElementById("count3").className = "";
+      }
     },
   },
 
-  components: {},
+  components: { ICountUp },
 
-  mounted() {
-    this.myFunction();
+  created() {
+    window.addEventListener("scroll", this.scrollFunction);
   },
 };
 </script>

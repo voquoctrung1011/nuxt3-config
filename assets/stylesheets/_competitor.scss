@@ -82,7 +82,7 @@
 }
 
 .count {
-  animation: counter 5s;
+  animation: counter 2s;
   counter-reset: num var(--num);
 }
 .count::before {
@@ -90,7 +90,7 @@
 }
 
 .count2 {
-  animation: counter 5s;
+  animation: counter 2s;
   counter-reset: num2 var(--num2);
 }
 .count2::before {
@@ -98,22 +98,24 @@
 }
 
 .count3 {
-  animation: counter 5s;
+  animation: counter 2s;
   counter-reset: num3 var(--num3);
 }
 .count3::before {
   content: counter(num3);
 }
 
-@keyframes counter {
-  from {
-    --num: 100;
-    --num2: 1000;
-    --num3: 10000;
-  }
-  to {
-    --num: 10000;
-    --num2: 109735;
-    --num3: 20000000;
+.count:hover {
+  @keyframes counter {
+    from {
+      --num: 100;
+      --num2: 1000;
+      --num3: 10000;
+    }
+    to {
+      --num: 10000;
+      --num2: 109735;
+      --num3: 20000000;
+    }
   }
 }
