@@ -1,5 +1,10 @@
 <template>
-  <div class="modal" id="modal" v-bind:class="{ 'is-active': modalLogin }">
+  <div
+    class="modal"
+    id="modal"
+    v-bind:class="{ 'is-active': modalLogin }"
+    @keydown.esc="changeModalLogin"
+  >
     <div class="modal-background"></div>
     <div
       class="modal-content"
@@ -105,6 +110,13 @@ export default {
     },
   },
   mounted() {},
-  created() {},
+  created() {
+    document.onkeydown = (evt) => {
+      evt = evt || window.event;
+      if (evt.keyCode == 27) {
+        this.$emit("changeModalLogin");
+      }
+    };
+  },
 };
 </script>

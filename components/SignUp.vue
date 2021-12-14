@@ -77,5 +77,14 @@ export default {
       this.$emit("changeModalSignUp");
     },
   },
+  created() {
+    document.onkeydown = (evt) => {
+      evt = evt || window.event;
+      if (evt.keyCode == 27) {
+        this.$emit("changeModalLogin");
+        this.$emit("changeModalSignUp");
+      }
+    };
+  },
 };
 </script>
