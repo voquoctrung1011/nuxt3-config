@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "Pretendard";
+  src: local("Pretendard"), url("../fonts/Pretendard-Regular.otf") format("truetype");
+}
+
 #__layout {
   background: #f6f7f9;
 }
@@ -27,7 +32,7 @@ h4,
 p,
 span,
 a {
-  font-family: Pretendard;
+  font-family: "Pretendard";
   font-style: normal;
   font-weight: normal;
 }
