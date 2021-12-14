@@ -45,6 +45,7 @@
           aria-label="menu"
           aria-expanded="false"
           data-target="navbarBasicExample"
+          style="width: 21px"
           v-on:click="activeMenu = !activeMenu"
         >
           <span aria-hidden="true"></span>
@@ -96,7 +97,7 @@
       </div>
 
       <div class="navbar-end">
-        <div class="navbar-item">
+        <div class="navbar-item" style="padding-right: 0">
           <div class="buttons">
             <div class="navbar-item has-dropdown is-hoverable">
               <a class="navbar-link"> 한국어 </a>
