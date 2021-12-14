@@ -78,13 +78,21 @@
             </div>
           </div>
 
-          <div class="services">
+          <div class="services" style="margin-top: 10px">
             <h3>서비스 및 유형 <span>*</span></h3>
           </div>
           <!-- name -->
           <div class="field">
             <div class="control">
-              <input class="input" type="text" placeholder="이름" />
+              <input
+                class="input"
+                type="text"
+                placeholder="이름"
+                style="border-color: #d2416d"
+              />
+              <p style="color: #d2416d; font-size: 10px; padding-top: 5px">
+                에러메세지는 여기에
+              </p>
             </div>
           </div>
 
@@ -144,6 +152,7 @@
             >
               <a class="navbar-link">
                 <div
+                  style="width: 20px; margin-right: 8px"
                   v-bind:style="[
                     country === '' ? { display: 'none' } : { display: 'block' },
                   ]"
