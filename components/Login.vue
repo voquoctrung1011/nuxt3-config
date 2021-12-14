@@ -1,10 +1,11 @@
 <template>
-  <div
-    class="modal"
-    id="modal"
-    v-bind:class="{ 'is-active': modalLogin }"
-    @keydown.esc="changeModalLogin"
-  >
+  <div class="modal" id="modal" v-bind:class="{ 'is-active': modalLogin }">
+    <SignUp
+      v-if="!modalSigin && modalSignup"
+      v-bind:modalSignup="modalSignup"
+      v-on:changeModalLogin="changeModalLogin"
+      v-on:changeModalSignUp="changeModalSignUp"
+    />
     <div class="modal-background"></div>
     <div
       class="modal-content"
@@ -66,12 +67,6 @@
         IPEDIT이 처음이신가요?<span v-on:click="openModalSignUp">회원가입</span>
       </p>
     </div>
-    <SignUp
-      v-if="!modalSigin && modalSignup"
-      v-bind:modalSignup="modalSignup"
-      v-on:changeModalLogin="changeModalLogin"
-      v-on:changeModalSignUp="changeModalSignUp"
-    />
 
     <button
       class="modal-close is-large"

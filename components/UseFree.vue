@@ -7,9 +7,11 @@
       </a>
     </div>
     <SignUp
-      v-if="modalSignup"
+      v-if="!modalSigin && modalSignup"
       v-bind:modalSignup="modalSignup"
+      v-on:changeModalLogin="changeModalLogin"
       v-on:changeModalSignUp="changeModalSignUp"
+      v-on:openModalLogin="openModalLogin"
     />
   </div>
 </template>
@@ -22,7 +24,7 @@
 import SignUp from "./SignUp.vue";
 export default {
   data() {
-    return { modalSignup: false };
+    return { modalLogin: false, modalSignup: false, modalSigin: false };
   },
   components: { SignUp },
   methods: {
@@ -31,6 +33,13 @@ export default {
     },
     openModalSignUp: function () {
       this.modalSignup = true;
+    },
+    openModalLogin: function () {
+      console.log("b");
+      this.modalLogin = true;
+    },
+    changeModalLogin: function () {
+      this.modalLogin = false;
     },
   },
 };

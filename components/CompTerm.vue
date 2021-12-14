@@ -3,7 +3,7 @@
     <div class="term__container container">
       <h1>{{ title }}</h1>
       <!-- select -->
-      <div class="field">
+      <!-- <div class="field">
         <div class="control">
           <div class="select">
             <select>
@@ -19,6 +19,25 @@
               </option>
             </select>
           </div>
+        </div>
+      </div> -->
+
+      <div
+        class="navbar-item has-dropdown"
+        v-on:click="activeDropdown = !activeDropdown"
+        v-bind:class="{ 'is-active': activeDropdown }"
+      >
+        <a class="navbar-link"> {{ date }} </a>
+        <div class="navbar-dropdown">
+          <a
+            class="navbar-item"
+            style="margin-bottom: 10px; border: none"
+            v-for="item in arrSelect"
+            :key="item"
+            v-on:click="selectItem(item)"
+          >
+            <p>{{ item }}</p>
+          </a>
         </div>
       </div>
 
@@ -48,7 +67,7 @@
 <script>
 export default {
   data() {
-    return {};
+    return { activeDropdown: false, date: "2021.05.1" };
   },
   props: {
     title: String,
@@ -59,5 +78,10 @@ export default {
     content2: String,
   },
   components: {},
+  methods: {
+    selectItem: function (item) {
+      this.date = item;
+    },
+  },
 };
 </script>

@@ -44,7 +44,7 @@
       </div>
 
       <p class="signup">
-        이미 회원이신가요?<span v-on:click="changeModalSignUp">로그인</span>
+        이미 회원이신가요?<span v-on:click="openModalLogin">로그인</span>
       </p>
     </div>
     <button
@@ -75,6 +75,11 @@ export default {
     changeModalSignUp: function () {
       this.$emit("changeModalLogin");
       this.$emit("changeModalSignUp");
+    },
+    openModalLogin: function () {
+      console.log("a");
+      this.$emit("changeModalSignUp");
+      this.$emit("openModalLogin");
     },
   },
   created() {

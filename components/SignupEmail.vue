@@ -49,13 +49,32 @@
         <!-- content 1 -->
         <div id="product-details" class="content-data" v-if="idTabs === 1">
           <!-- Type of application -->
-          <div class="field">
+          <!-- <div class="field">
             <div class="control">
               <div class="select">
                 <select>
                   <option>명세서 유형</option>
                 </select>
               </div>
+            </div>
+          </div> -->
+
+          <div
+            class="navbar-item has-dropdown"
+            v-on:click="activeDropdown = !activeDropdown"
+            v-bind:class="{ 'is-active': activeDropdown }"
+          >
+            <a class="navbar-link"> {{ type }} </a>
+            <div class="navbar-dropdown" style="height: max-content">
+              <a
+                class="navbar-item"
+                style="margin-bottom: 10px; border: none"
+                v-for="item in arrSelect"
+                :key="item"
+                v-on:click="selectItem(item)"
+              >
+                <p>{{ item }}</p>
+              </a>
             </div>
           </div>
 
@@ -117,25 +136,36 @@
           </div>
           <!-- Select country -->
           <div class="select-country">
-            <div class="field">
-              <div class="control has-icons-left">
-                <div class="select">
-                  <select>
-                    <option
-                      v-for="item in countries"
-                      :key="item.dial_code"
-                      :value="item.dial_code"
-                    >
-                      <span>{{ item.name }}</span>
-                      <span>{{ item.dial_code }}</span>
-                    </option>
-                  </select>
-                  <div class="icon is-small is-left">
-                    <i class="fas fa-border fa-globe mdi mdi-dark"></i>
-                  </div>
+            <div
+              class="navbar-item has-dropdown"
+              style="width: 27%"
+              v-on:click="activeCountry = !activeCountry"
+              v-bind:class="{ 'is-active': activeCountry }"
+            >
+              <a class="navbar-link">
+                <div
+                  v-bind:style="[
+                    country === '' ? { display: 'none' } : { display: 'block' },
+                  ]"
+                >
+                  <img src="../assets/images/Korea.png" />
                 </div>
+                {{ country.dial_code }}
+              </a>
+              <div class="navbar-dropdown">
+                <a
+                  class="navbar-item item__country"
+                  v-for="item in countries"
+                  :key="item"
+                  v-on:click="selectCountry(item)"
+                >
+                  <div><img src="../assets/images/Korea.png" /></div>
+                  <span class="nameCountry">{{ item.name }}</span>
+                  <span class="dial_code">{{ item.dial_code }}</span>
+                </a>
               </div>
             </div>
+
             <!-- Phone -->
             <div class="field field-doubles">
               <div class="control">
@@ -217,6 +247,11 @@ export default {
     return {
       idTabs: 1,
       countries: Country,
+      arrSelect: ["명세서 유형", "명세서 유형1", "명세서 유형2"],
+      activeDropdown: false,
+      activeCountry: false,
+      type: "명세서 유형",
+      country: "",
     };
   },
   props: {
@@ -230,19 +265,12 @@ export default {
     changeModalSignUp: function () {
       this.$emit("changeModalSignUp");
     },
-  },
-  beforeUpdate() {
-    const tabs = document.querySelectorAll(".tab li");
-    const tableContentBoxs = document.querySelectorAll("#tab-content > div");
-
-    tabs.forEach((tab) => {
-      tab.addEventListener("click", () => {
-        tabs.forEach((item) => item.classList.remove("is-active"));
-        tab.classList.add("is-active");
-
-        const target = tab.dataset.target;
-      });
-    });
+    selectItem: function (item) {
+      this.type = item;
+    },
+    selectCountry: function (item) {
+      this.country = item;
+    },
   },
 };
 </script>

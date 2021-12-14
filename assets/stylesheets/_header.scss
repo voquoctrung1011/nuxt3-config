@@ -43,6 +43,9 @@
     padding: 0 !important;
     .navbar-item {
       padding-bottom: 0 !important;
+      &:hover {
+        background: #fff !important;
+      }
     }
   }
 }
@@ -94,6 +97,8 @@
     box-shadow: 0px -20px 40px -20px rgb(0 0 0 / 25%);
     margin-top: 20px;
     background-color: #fff;
+    padding-left: 6px;
+    padding-right: 6px;
   }
 
   .endd {
@@ -115,6 +120,8 @@
 .navbar-dropdown {
   border: none;
   padding-top: 16px;
+  padding-left: 6px;
+  padding-right: 6px;
   .navbar-item {
     // padding-left: 10px;
     display: flex;
@@ -154,7 +161,7 @@
       font-size: 18px;
       padding-bottom: 8px !important;
       @media only screen and (max-width: 1023px) {
-        padding-bottom: 30px !important;
+        padding: 15px 0 !important;
       }
     }
     p:nth-child(2) {

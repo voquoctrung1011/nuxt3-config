@@ -4,6 +4,14 @@
       v-if="modalLogin"
       v-bind:modalLogin="modalLogin"
       v-on:changeModalLogin="changeModalLogin"
+      v-on:openModalLogin="openModalLogin"
+    />
+    <SignUp
+      v-if="modalSignup"
+      v-bind:modalSignup="modalSignup"
+      v-on:changeModalLogin="changeModalLogin"
+      v-on:changeModalSignUp="changeModalSignUp"
+      v-on:openModalLogin="openModalLogin"
     />
     <div class="navbar-brand">
       <a class="navbar-item logo" href="/">
@@ -31,7 +39,12 @@
                   </a>
                 </div>
               </div>
-              <a class="navbar-item item-log"> 로그인 </a>
+              <a
+                class="navbar-item item-log"
+                v-on:click="modalLogin = !modalLogin"
+              >
+                로그인
+              </a>
               <a class="button btn" v-on:click="modalLogin = !modalLogin">
                 시작하기
               </a>
@@ -110,8 +123,10 @@
                 </a>
               </div>
             </div>
-            <a class="navbar-item"> 로그인 </a>
-            <a class="button btn" v-on:click="modalLogin = !modalLogin">
+            <a class="navbar-item" v-on:click="modalLogin = !modalLogin">
+              로그인
+            </a>
+            <a class="button btn" v-on:click="modalSignup = !modalSignup">
               시작하기
             </a>
           </div>
@@ -128,6 +143,7 @@
 
 <script>
 import Login from "../components/Login.vue";
+import SignUp from "../components/SignUp.vue";
 export default {
   data() {
     return {
@@ -135,12 +151,19 @@ export default {
       activeEdd: false,
       activeDropdown: false,
       modalLogin: false,
+      modalSignup: false,
     };
   },
-  components: { Login },
+  components: { Login, SignUp },
   methods: {
     changeModalLogin: function () {
       this.modalLogin = false;
+    },
+    openModalLogin: function () {
+      this.modalLogin = true;
+    },
+    changeModalSignUp: function () {
+      this.modalSignup = false;
     },
   },
   // created() {

@@ -1,8 +1,93 @@
 @import "./global.scss";
 ::-webkit-scrollbar {
-  width: 2px;
+  width: 5px;
+}
+.navbar-dropdown {
+  border: none;
+  padding-top: 16px;
+  padding-left: 6px;
+  padding-right: 6px;
+  overflow: auto;
+  height: 200px;
+  .navbar-item {
+    display: flex;
+    flex-direction: column;
+    padding: 6px;
+    height: 32px;
+    &:hover {
+      background: #f6f7f9 !important;
+      border-radius: 4px;
+    }
+    p {
+      width: 100%;
+      text-align: left;
+      font-size: 14px;
+      padding-bottom: 0 !important;
+      color: #212037;
+      margin: 0;
+    }
+  }
+  .item__country {
+    margin-bottom: 10px;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    height: 32px;
+    div {
+      width: 20px;
+      height: 14px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    span {
+      font-weight: 400;
+      font-size: 14px;
+    }
+    .nameCountry {
+      color: #212037;
+      margin: 0 10px;
+    }
+    .dial_code {
+      color: #7c7f90;
+    }
+  }
 }
 
+.navbar-item,
+.navbar-link {
+  font-family: "Pretendard";
+  line-height: 100%;
+  padding: 10px;
+  &:hover {
+    background-color: #fff !important;
+  }
+}
+.navbar-link:not(.is-arrowless)::after {
+  border-color: #212037;
+  margin-top: -8px;
+  right: 10px;
+}
+
+.navbar-item,
+.has-dropdown,
+.is-hoverable {
+  border: 1px solid #dbdbdb;
+  border-radius: 4px;
+  height: 52px;
+  width: 100%;
+  a {
+    width: 100% !important;
+    display: flex;
+    color: #7c7f917a;
+    font-size: 14px;
+    justify-content: space-between;
+  }
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
 .modal-content::-webkit-scrollbar {
   width: 10px;
 }

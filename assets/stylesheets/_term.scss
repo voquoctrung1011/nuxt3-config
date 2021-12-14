@@ -1,4 +1,73 @@
 @import "./global.scss";
+::-webkit-scrollbar {
+  width: 10px;
+}
+.navbar-dropdown {
+  border: none;
+  padding-top: 16px;
+  padding-left: 6px;
+  padding-right: 6px;
+  overflow: auto;
+  height: 200px;
+  .navbar-item {
+    display: flex;
+    flex-direction: column;
+    padding: 6px;
+    margin: 0;
+    height: 30px;
+    @media only screen and (max-width: 1023px) {
+      padding: 1rem 0.75rem;
+    }
+    &:hover {
+      background: #f6f7f9 !important;
+      border-radius: 4px;
+    }
+    p {
+      width: 100%;
+      text-align: left;
+      font-size: 14px;
+      padding-bottom: 0 !important;
+    }
+  }
+}
+
+.navbar-item,
+.navbar-link {
+  padding-right: 30px;
+  font-family: "Pretendard";
+  font-style: normal;
+  font-size: 14px;
+  line-height: 100%;
+  color: #212037;
+  padding-left: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  &:hover {
+    background-color: #fff !important;
+  }
+}
+.navbar-link:not(.is-arrowless)::after {
+  border-color: #212037;
+  margin-top: -8px;
+  right: 10px;
+}
+
+.navbar-item,
+.has-dropdown,
+.is-hoverable {
+  height: 50px;
+  border: 1px solid #f1f1f1;
+  width: 150px;
+  border-radius: 6px;
+  padding: 10px;
+  margin-bottom: 40px;
+  a {
+    width: 100% !important;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
 .aaaa {
   display: flex;
   flex-direction: column;
