@@ -108,8 +108,8 @@
             </div>
             <div class="top-img">
               <img
-                src="../assets/images/frame.png"
-                alt="../assets/images/frame.png"
+                src="../assets/images/Sec.png"
+                alt="../assets/images/Sec.png"
               />
             </div>
             <div class="top-img">
