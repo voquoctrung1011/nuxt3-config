@@ -10,7 +10,9 @@
   text-align: center;
   @media only screen and (max-width: 582px) {
     width: 90%;
+    padding: 20px;
   }
+
   .logo {
     padding-bottom: 10px;
   }
@@ -139,6 +141,9 @@
       img {
         filter: invert(15%) sepia(1%) saturate(40%) hue-rotate(334deg) brightness(93%) contrast(96%);
         width: 140px;
+        @media only screen and (max-width: 582px) {
+          width: 100px;
+        }
       }
     }
   }

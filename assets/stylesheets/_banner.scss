@@ -18,10 +18,11 @@
     max-height: 240px;
     text-align: center;
     padding: 360px 0;
-    max-width: 383px;
+    max-width: auto;
     margin: 0 auto;
     @media only screen and (max-width: 582px) {
-      padding: 160px 36px;
+    max-width: 500px;
+    padding: 160px 36px;
     }
     @media only screen and (max-width: 582px) {
       padding: 113px 36px;
