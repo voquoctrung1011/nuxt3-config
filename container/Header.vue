@@ -9,6 +9,7 @@
       <a class="navbar-item logo" href="/">
         <img src="../assets/images/ipedit.png" width="112" height="28" />
       </a>
+
       <!-- responsive-edd -->
       <div class="responsive-edd">
         <div class="navbar-end endd">

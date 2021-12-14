@@ -5,6 +5,7 @@
         아직도 사용 전이신가요?<br />
         당신의 경쟁자는 이미 IPEDIT으로 앞서가고 있습니다.
       </h3>
+
       <div class="markets">
         <p>사용자 수</p>
         <h1 class="" id="count"><span>명</span></h1>
@@ -18,24 +19,11 @@
         <h1 class="" id="count3"><span>시간</span></h1>
       </div>
     </div>
-    <!-- <div class="iCountUp">
-      <ICountUp
-        :delay="delay"
-        :endVal="endVal"
-        :options="options"
-        @ready="onReady"
-      />
-    </div> -->
   </div>
 </template>
 
 <style lang="scss" scoped>
 @import "../assets/stylesheets/competitor.scss";
-.iCountUp {
-  font-size: 12em;
-  margin: 0;
-  color: #4d63bc;
-}
 </style>
 
 <script  type="text/babel">

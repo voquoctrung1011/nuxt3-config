@@ -20,9 +20,12 @@
           <iframe
             width="420"
             height="315"
-            src="https://www.youtube.com/embed/tgbNymZ7vqY"
-          >
-          </iframe>
+            src="https://www.youtube.com/embed/hF5b-9iAN1k"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
         </div>
         <button
           class="modal-close is-large"
