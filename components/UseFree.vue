@@ -6,6 +6,11 @@
         IPEDIT 시작하기
       </a>
     </div>
+    <Login
+      v-bind:modalLogin="modalLogin"
+      v-on:changeModalLogin="changeModalLogin"
+      v-on:openModalLogin="openModalLogin"
+    />
     <SignUp
       v-if="!modalSigin && modalSignup"
       v-bind:modalSignup="modalSignup"
@@ -35,7 +40,6 @@ export default {
       this.modalSignup = true;
     },
     openModalLogin: function () {
-      console.log("b");
       this.modalLogin = true;
     },
     changeModalLogin: function () {

@@ -1,7 +1,6 @@
 <template>
   <nav class="navbar" role="navigation" aria-label="main navigation">
     <Login
-      v-if="modalLogin"
       v-bind:modalLogin="modalLogin"
       v-on:changeModalLogin="changeModalLogin"
       v-on:openModalLogin="openModalLogin"
