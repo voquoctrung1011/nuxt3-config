@@ -21,12 +21,14 @@
     max-width: auto;
     margin: 0 auto;
     @media only screen and (max-width: 582px) {
-    max-width: 500px;
-    padding: 160px 36px;
+      max-width: 500px;
+      padding: 190px 36px;
     }
-    @media only screen and (max-width: 582px) {
-      padding: 113px 36px;
+    @media only screen and (max-width: 375px) {
+      max-width: 500px;
+      padding: 130px 36px;
     }
+
     &__img {
       @media only screen and (max-width: 375px) {
         width: 220px;
