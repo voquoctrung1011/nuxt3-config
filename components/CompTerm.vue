@@ -28,7 +28,10 @@
         v-bind:class="{ 'is-active': activeDropdown }"
       >
         <a class="navbar-link"> {{ date }} </a>
-        <div class="navbar-dropdown">
+        <div
+          class="navbar-dropdown"
+          :style="[!activeDropdown && { display: 'none' }]"
+        >
           <a
             class="navbar-item"
             style="margin-bottom: 10px; border: none"
