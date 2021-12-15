@@ -57,7 +57,6 @@
           aria-label="menu"
           aria-expanded="false"
           data-target="navbarBasicExample"
-          style="width: 21px"
           v-on:click="activeMenu = !activeMenu"
         >
           <span aria-hidden="true"></span>
@@ -106,6 +105,9 @@
         <a class="navbar-item"> Stats </a>
         <a class="navbar-item"> Why IPEDIT? </a>
         <a class="navbar-item"> Contact us </a>
+        <a class="button btn btn-respon" v-on:click="modalLogin = !modalLogin">
+          시작하기
+        </a>
       </div>
 
       <div class="navbar-end">

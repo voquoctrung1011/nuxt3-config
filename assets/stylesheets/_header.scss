@@ -1,8 +1,15 @@
 @import "./global.scss";
 .navbar {
   padding: 16px 40px;
+  @media only screen and (max-width: 1023px) {
+  }
+  @media only screen and (max-width: 375px) {
+    padding-bottom: 15px !important;
+  }
+
   @media only screen and (max-width: 375px) {
     padding: 16px 15px;
+    padding-bottom: 0;
   }
   .navbar-brand {
     justify-content: space-between;
@@ -44,15 +51,21 @@
     .navbar-item {
       padding-bottom: 0 !important;
       &:hover {
-        background: #fff !important;
+        background: none !important;
       }
     }
   }
 }
 .navbar-menu {
   @media only screen and (max-width: 1023px) {
-    padding: 20px;
+    padding-top: 20px;
+    padding-bottom: 0;
+    margin-bottom: -10px;
     box-shadow: none;
+  }
+  @media only screen and (max-width: 620px) {
+    margin-bottom: 0;
+    padding-bottom: 10px;
   }
 }
 .navbar-start {
@@ -123,10 +136,8 @@
   padding-left: 6px;
   padding-right: 6px;
   .navbar-item {
-    // padding-left: 10px;
     display: flex;
     flex-direction: column;
-    // padding-bottom: 20px;
     padding: 16px;
     @media only screen and (max-width: 1023px) {
       padding: 1rem 0.75rem;
@@ -157,6 +168,9 @@
   width: 220px;
   height: max-content;
   .navbar-item {
+    &:hover {
+      background: none !important;
+    }
     p:nth-child(1) {
       font-size: 18px;
       padding-bottom: 8px !important;
@@ -173,16 +187,47 @@
   }
   @media only screen and (max-width: 1023px) {
     .navbar-item:nth-child(1) {
+      &:hover {
+        background: none !important;
+      }
       p:nth-child(1) {
         padding-top: 30px !important;
       }
     }
     .navbar-item:nth-child(2) {
+      &:hover {
+        background: none !important;
+      }
       p:nth-child(1) {
         padding-bottom: 0px !important;
       }
     }
   }
+}
+.navbar-burger {
+  height: max-content;
+  @media only screen and (max-width: 620px) {
+    margin-left: -24px;
+  }
+  span {
+    width: 21px;
+    background: #7c7f91;
+    height: 2px;
+  }
+}
+.btn-respon {
+  display: none !important;
+  @media only screen and (max-width: 620px) {
+    display: flex !important;
+    width: 100% !important;
+    height: 36px !important;
+    border-radius: 6px;
+    font-size: 16px;
+    margin-bottom: 20px !important;
+  }
+}
+.navbar-item:hover {
+  background-color: #fff !important;
 }
 .navbar-item,
 .navbar-link {
@@ -197,10 +242,13 @@
   padding-top: 0;
   padding-bottom: 0;
   &:hover {
-    background-color: #fff !important;
+    background-color: none !important;
   }
   @media only screen and (max-width: 1023px) {
     padding-bottom: 30px;
+    .navbar-link:not(.is-arrowless) {
+      padding-right: 28px;
+    }
   }
 }
 .navbar-link:not(.is-arrowless)::after {
