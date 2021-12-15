@@ -29,6 +29,7 @@
                 <div
                   class="navbar-dropdown"
                   v-bind:class="{ showDropEdd: !activeEdd }"
+                  style="z-index: 111111"
                 >
                   <a class="navbar-item">
                     <p>English</p>
