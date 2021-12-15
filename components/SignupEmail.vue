@@ -65,7 +65,11 @@
             v-bind:class="{ 'is-active': activeDropdown }"
           >
             <a class="navbar-link"> {{ type }} </a>
-            <div class="navbar-dropdown" style="height: max-content">
+            <div
+              class="navbar-dropdown"
+              style="height: max-content; bacground: #fff"
+              :style="[!activeDropdown && { display: 'none' }]"
+            >
               <a
                 class="navbar-item"
                 style="margin-bottom: 10px; border: none"
@@ -145,30 +149,32 @@
           <!-- Select country -->
           <div class="select-country">
             <div
-              class="navbar-item has-dropdown"
+              class="navbar-item has-dropdown field"
               style="width: 27%"
               v-on:click="activeCountry = !activeCountry"
               v-bind:class="{ 'is-active': activeCountry }"
             >
               <a class="navbar-link">
-                <div
-                  style="width: 20px; margin-right: 8px"
+                <img
                   v-bind:style="[
                     country === '' ? { display: 'none' } : { display: 'block' },
                   ]"
-                >
-                  <img src="../assets/images/Korea.png" />
-                </div>
+                  src="../assets/images/Korea.png"
+                />
                 {{ country.dial_code }}
               </a>
-              <div class="navbar-dropdown">
+              <div
+                class="navbar-dropdown"
+                style="background: #fff"
+                :style="[!activeCountry && { display: 'none' }]"
+              >
                 <a
                   class="navbar-item item__country"
                   v-for="item in countries"
                   :key="item"
                   v-on:click="selectCountry(item)"
                 >
-                  <div><img src="../assets/images/Korea.png" /></div>
+                  <img src="../assets/images/Korea.png" />
                   <span class="nameCountry">{{ item.name }}</span>
                   <span class="dial_code">{{ item.dial_code }}</span>
                 </a>
