@@ -32,12 +32,14 @@
 
       <!-- Remember password -->
       <div class="checkbox-control">
-        <label class="checkbox">
-          <input type="checkbox" />
-          이메일 저장하기
+        <label class="container__checbox"
+          >이메일 저장하기
+          <input type="checkbox" checked="checked" />
+          <span class="checkmark"></span>
         </label>
         <p>비밀번호 찾기</p>
       </div>
+
       <!-- login with Email -->
       <div class="field">
         <p class="control">
